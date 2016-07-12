@@ -1,17 +1,14 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model Week5Day2.Rental
+
+@{
+    ViewBag.Title = "Movie Stuff";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<p>The Disk ID is @Model.DiskID</p>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<p>The Checkout Date was @Model.CheckOutDate.ToShortDateString()</p>
+
+<p>The customer that rented this was @Model.Customer.FirstName @Model.Customer.LastName</p>
+
+<p>The name of the movie is @Model.Inventory.Movy.MovieName</p>
